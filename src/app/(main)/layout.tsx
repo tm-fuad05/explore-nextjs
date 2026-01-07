@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Oxanium } from "next/font/google";
+import { Hind_Siliguri } from "next/font/google";
 import "@/app/global.css";
 
-const oxanium = Oxanium({
+const hind_shiliguri = Hind_Siliguri({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-oxanium",
@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={oxanium.variable}>
+      <body className={hind_shiliguri.variable}>
         {/* Navbar */}
         <nav className="bg-blue-700 text-center w-full">Navbar</nav>
         <main>{children}</main>

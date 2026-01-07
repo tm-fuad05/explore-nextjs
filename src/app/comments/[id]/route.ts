@@ -1,5 +1,4 @@
-export const revalidate = 0;
-import { comments, Comments } from "../data";
+import { comments } from "../data";
 
 export async function GET(
   _request: Request,
@@ -37,9 +36,8 @@ export async function DELETE(
   const { id } = await params;
   const index = comments.findIndex((c) => c.id === parseInt(id));
   const deletedComnt = comments[index];
-  if (index !== -1) {
-    comments.splice(index, 1);
-  }
+
+  comments.splice(index, 1);
 
   return Response.json(deletedComnt);
 }
